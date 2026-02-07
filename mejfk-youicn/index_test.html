@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<title>Daisyeon</title>
+
+		<!-- montserrat 글씨체 -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	
+
+	<!-- Espacio Novo 글씨체-->
+	<link rel="stylesheet" href="../assets/css/espacio_novo_font.css">
+
+	<!-- 네비게이션 바-->
+	<script src="../assets/js/nav-bar-for-file-structure.js" defer></script>
+	<script src="../assets/js/footer-bar-for-file-structure.js" defer></script>
+
+
+	<link rel="stylesheet" type="text/css" href="css/JFKINC_style.css">
+	<link rel="icon" href="../assets/images/favicon.png" type="image/png">
+</head>
+
+<body>
+
+	<div class="frame">
+		<nav-bar></nav-bar>
+		
+		<div class="fixed-text">
+			<div class="zone2">
+				<div class="zone2-1">
+					<p>"Me:JFK, You:ICN"<br> short film about Survivor's Life</p>
+				</div>
+				<div class="zone2-2">
+					<div class="zone2-2-1">
+						<a href="https://www.gofundme.com/f/mejfk-you-icn-short-film-about-survivors-life?attribution_id=sl:cf78f3c8-752f-405b-9b27-f2134a1b877a&lang=en_US&utm_campaign=fp_sharesheet&utm_medium=customer&utm_source=copy_link">
+							<img src="img/I'm_looking_for_an_angel.png">
+						</a>
+					</div>
+					<div class="zone2-2-2">
+						<div class="zone2-2-2-1">
+							<button onclick="copyLinkToClipboard('https://gofund.me/59e09276');">
+								Share
+							</button>
+
+						</div>
+						<div class="zone2-2-2-2">
+							<button onclick="window.location.href='https://www.gofundme.com/f/mejfk-you-icn-short-film-about-survivors-life/donate?source=btn_donate';">
+								Click to Help
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="dashboard">
+
+			
+
+			<div class="zone1">
+				<div class="zone1-1">
+					<p>Me:JFK, You:ICN</p>
+				</div>
+
+				<div class="zone4">
+					<img src="img/JFK_You_ICN2.png">
+				</div>
+
+
+				<div class="zone1-2">
+					<p>Short Film / Drama / 17 mins / 2025 / USA, KR</p>
+				</div>
+				<div class="zone1-3">
+					<!--<iframe src="https://drive.google.com/file/d/1nsp8rYcXRsorYQLU7YPwq_i2e3_Hdmca/preview" allow="autoplay"></iframe>-->
+					<audio id="myAudio" autoplay muted controls>
+						<source src="../assets/audio/yjmi_theme_1.wav" type="audio/wav">
+						Your browser does not support the audio element.
+					</audio>
+				</div>
+			</div>
+
+			<div class="zone3">
+				<div class="zone3-1">
+					<p><strong>Logline</strong></p>
+				</div>
+				<div class="zone3-2">
+					<p>A young flight attendant Ina is suffering to find a way to go back home on National Children’s Day to please her parents and to attend her brother’s wedding ceremony who sexually abused her. She finds a way to break the trauma and start a new life.</p>
+				</div>
+			</div>
+
+			<div class="zone4">
+				<img src="img/JFK_You_ICN3.png">
+			</div>
+		</div>
+
+		<footer-bar></footer-bar>
+	</div>
+
+	<!--자동재생-->
+
+	<script>
+		document.body.addEventListener('click', function() {
+			const audio = document.getElementById('myAudio');
+			audio.muted = false;  // 음소거 해제
+			audio.play();  // 다시 재생
+		});
+	</script>
+
+	<!--링크 클립보드 복사-->
+
+	<script>
+		// 링크를 클립보드에 복사하는 함수
+		function copyLinkToClipboard(link) {
+			navigator.clipboard.writeText(link)
+				.then(() => {
+					alert("The link has been copied to the clipboard.: \n" + link);
+				})
+				.catch(err => {
+					console.error("fail to copy link sry try again later or use upper immage", err);
+				});
+		}
+	</script>
+
+</body>
+
+</html>

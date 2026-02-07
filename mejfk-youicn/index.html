@@ -2,31 +2,61 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Daisyeon</title>
 
-		<!-- montserrat 글씨체 -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	
-
-	<!-- Espacio Novo 글씨체-->
+	<!-- 글씨체 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../assets/css/espacio_novo_font.css">
 
-	<!-- 네비게이션 바-->
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/JFKINC_style_test.css">
+	<link rel="icon" href="../assets/images/favicon.png" type="image/png">
+
+	<!-- swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+	<!-- 네비게이션 & 푸터 -->
 	<script src="../assets/js/nav-bar-for-file-structure.js" defer></script>
 	<script src="../assets/js/footer-bar-for-file-structure.js" defer></script>
-
-
-	<link rel="stylesheet" type="text/css" href="css/JFKINC_style.css">
-	<link rel="icon" href="../assets/images/favicon.png" type="image/png">
 </head>
 
 <body>
-	<div class="frame">
+
+	<!-- 이미지 슬라이드 관련 -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+		  const swiper = new Swiper('.swiper', {
+			direction: 'horizontal', // vertical이면 세로 슬라이드
+			loop: true,
+			pagination: {
+			  el: '.swiper-pagination',
+			  clickable: true
+			},
+			navigation: {
+			  nextEl: '.swiper-button-next',
+			  prevEl: '.swiper-button-prev'
+			},
+			scrollbar: {
+			  el: '.swiper-scrollbar'
+			},
+			autoplay: {
+			  delay: 4000,
+			  disableOnInteraction: false
+			}
+		  });
+		});
+	</script>
+
+
+	<div class="top-white"></div>
+    <div class="frame">
+
 		<nav-bar></nav-bar>
-		
+
 		<div class="fixed-text">
 			<div class="zone2">
 				<div class="zone2-1">
@@ -40,90 +70,72 @@
 					</div>
 					<div class="zone2-2-2">
 						<div class="zone2-2-2-1">
-							<button onclick="copyLinkToClipboard('https://gofund.me/59e09276');">
-								Share
-							</button>
-
+							<button onclick="copyLinkToClipboard('https://gofund.me/59e09276');">Share</button>
 						</div>
 						<div class="zone2-2-2-2">
-							<button onclick="window.location.href='https://www.gofundme.com/f/mejfk-you-icn-short-film-about-survivors-life/donate?source=btn_donate';">
-								Click to Help
-							</button>
+							<button onclick="window.location.href='https://www.gofundme.com/f/mejfk-you-icn-short-film-about-survivors-life/donate?source=btn_donate';">Click to Help</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-
 		<div class="dashboard">
-
-			
-
 			<div class="zone1">
-				<div class="zone1-1">
-					<p>Me:JFK, You:ICN</p>
-				</div>
-
-				<div class="zone4">
-					<img src="img/JFK_You_ICN2.png">
-				</div>
-
-
-				<div class="zone1-2">
-					<p>Short Film / Drama / 17 mins / 2025 / USA, KR</p>
-				</div>
-				<div class="zone1-3">
-					<!--<iframe src="https://drive.google.com/file/d/1nsp8rYcXRsorYQLU7YPwq_i2e3_Hdmca/preview" allow="autoplay"></iframe>-->
-					<audio id="myAudio" autoplay muted controls>
-						<source src="../assets/audio/yjmi_theme_1.wav" type="audio/wav">
-						Your browser does not support the audio element.
-					</audio>
-				</div>
+				<img src="img/MJYI Final Title.png">
 			</div>
 
 			<div class="zone3">
-				<div class="zone3-1">
-					<p><strong>Logline</strong></p>
-				</div>
-				<div class="zone3-2">
-					<p>A young flight attendant Ina is suffering to find a way to go back home on National Children’s Day to please her parents and to attend her brother’s wedding ceremony who sexually abused her. She finds a way to break the trauma and start a new life.</p>
-				</div>
-			</div>
+				<nav class="in-nav-bar">
+					<ul>
+						<li><a href="#synopsis">Synopsis</a></li>
+						<li><a href="#director">Director’s Note</a></li>
+						<li><a href="#cast">Cast</a></li>
+						<li><a href="#creatives">Creatives</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="#credit">Credit</a></li>
+					</ul>
+				</nav>
 
-			<div class="zone4">
-				<img src="img/JFK_You_ICN3.png">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+					  	<div class="swiper-slide"><img src="img/slide/MJYI Still 001.jpg" alt="이미지1" /></div>
+					  	<div class="swiper-slide"><img src="img/slide/MJYI Still 002.jpg" alt="이미지2" /></div>
+					  	<div class="swiper-slide"><img src="img/slide/MJYI Still 003.jpg" alt="이미지3" /></div>
+					   	<div class="swiper-slide"><img src="img/slide/MJYI Still 004.jpg" alt="이미지4" /></div>
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-scrollbar"></div>
+				</div>
+
+				<section id="synopsis" class="zone">
+					<P>
+						Synopsis
+					</P>
+					<p>
+						Ina, a flight attendant in Dubai, learns that her abusive brother's wedding falls on Korea's National Children's Day. Struggling with family pressure, trauma, and anorexia symptoms, she realizes her lifelong desire to escape Korea stems from her past. In Madrid, a colleague inspires her to prioritize personal happiness. Ina decides to confront her past, attend the wedding, and ultimately pursue her own path. 
+					</p>
+				</section>
+				<section id="director" class="zone">
+					<P>
+						Director's note
+					</P>
+					<p>
+						The film delves into the emotional turmoil of the protagonist as she navigates the tension between her professional responsibilities and her personal history. I wanted to reflect the tension between memory and repression, centered on the liminal space of the airplane. Ina doesn’t just want to go home. I made the film to support what this survivor wants and desires, and every process she chooses.
+					</p>
+				</section>
+				<section id="cast" class="zone"></section>
+				<section id="creatives" class="zone"></section>
+				<section id="credit" class="zone"></section>
 			</div>
 		</div>
 
-		<footer-bar></footer-bar>
-	</div>
+        <footer-bar id="contact"></footer-bar>
+    </div> 
 
-	<!--자동재생-->
 
-	<script>
-		document.body.addEventListener('click', function() {
-			const audio = document.getElementById('myAudio');
-			audio.muted = false;  // 음소거 해제
-			audio.play();  // 다시 재생
-		});
-	</script>
-
-	<!--링크 클립보드 복사-->
-
-	<script>
-		// 링크를 클립보드에 복사하는 함수
-		function copyLinkToClipboard(link) {
-			navigator.clipboard.writeText(link)
-				.then(() => {
-					alert("The link has been copied to the clipboard.: \n" + link);
-				})
-				.catch(err => {
-					console.error("fail to copy link sry try again later or use upper immage", err);
-				});
-		}
-	</script>
 
 </body>
-
 </html>
