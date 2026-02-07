@@ -1,6 +1,5 @@
-# 지연의 시네마 블로그
-
-영화감독 지연의 작업과 애정을 기록하는 개인 블로그입니다. `Jiyeon-daisy-kim.github.io` 저장소에는 GitHub Pages로 바로 배포 가능한 정적 HTML·CSS·JS 파일이 포함되어 있으며, 추가적인 빌드 툴 없이도 동작합니다.
+# Jiyeon Kim's Website
+영화감독 지연의 작업을 기록하는 개인 블로그입니다. `Jiyeon-daisy-kim.github.io` 저장소에는 GitHub Pages로 바로 배포 가능한 정적 HTML·CSS·JS 파일이 포함되어 있습니다.
 
 ## 프로젝트 개요
 - **목적**: 작품 설명, 시사회 소식, 개인 에세이 등 영화 관련 콘텐츠를 한곳에 소개
