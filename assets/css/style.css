@@ -12,7 +12,7 @@
 }
 
 body{
-    background-image: url('/assets/images/Home_jfk_icn_bacground_img.png');
+    background-image: url('/assets/images/Home_jfk_icn_bacground_img%20copy.webp');
     /*'https://drive.google.com/thumbnail?id=17VIZLGhgtsskdQRde2WbH29KncbVyyNX&sz=w1000'*/
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,6 +39,7 @@ body{
         overflow: hidden;
     }
 }
+
 
 
 
