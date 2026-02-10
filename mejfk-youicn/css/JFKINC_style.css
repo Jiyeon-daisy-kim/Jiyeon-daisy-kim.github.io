@@ -13,6 +13,19 @@ body{
 
 /* 여기까지는 기본 세팅 */
 
+.trailer-video{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.trailer-video iframe{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+}
+
 .dashboard{
     margin-left: 10%;
     margin-right: 15%;
@@ -138,6 +151,7 @@ button:hover {
     color: white;
     background-color: #D6CCC2;
     border: none; /* 호버 상태에서도 테두리 없음 */
+
 }
 =======
 body{
