@@ -37,7 +37,7 @@ body{
     right: 5%;
     width: 185px;
     font-size: 12px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
     border-radius: 5px;
     z-index: 999;
@@ -159,7 +159,9 @@ button {
     font-weight: 600;
     font-family: "Montserrat";
     color: gray;
-    background-color: #f5ebe0;
+
+
+    background-color: rgba(245, 235, 224, 0.5);
     border-radius: 5px;
     transition: all 0.2s;
     border: none;
@@ -168,7 +170,7 @@ button {
 
 button:hover {
     color: white;
-    background-color: #D6CCC2;
+    background-color: rgba(214, 204, 194, 0.7);
     border: none; /* 호버 상태에서도 테두리 없음 */
 }
 
