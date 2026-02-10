@@ -157,7 +157,17 @@ body{
     border: none;
 }
 
+#credit{
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+}
 
+#credit img{
+    width: auto;
+    height: auto;
+    max-width: 100vw;
+}
 
 
 button {
