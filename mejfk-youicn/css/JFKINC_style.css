@@ -170,3 +170,19 @@ button:hover {
   display: block;
 }
 
+#credit{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px){
+  #credit{
+    max-width: 1100px;
+  }
+}
+
+#credit img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
