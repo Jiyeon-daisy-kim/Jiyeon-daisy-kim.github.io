@@ -30,7 +30,6 @@ body{
 }
 
 
-
 .fixed-text {
     position: fixed;
     top: 20%;
@@ -128,7 +127,7 @@ body{
 .in-nav-bar li a {
   text-decoration: none;   /* 밑줄 제거 */
   color: white;            /* 글자색 흰색 */
-  font-weight: 400;        /* 두껍게 */
+  font-weight: 600;        /* 두껍게 */
   font-size: 1.2vw;     /* 글자 크기 (원하는 크기) */
   white-space: nowrap; /*줄바꿈 금지*/
 }
@@ -158,17 +157,19 @@ body{
 }
 
 #credit{
-    display: flex;
-    justify-content: center;
-    padding: 100px 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 0;
+  overflow: hidden;
 }
 
 #credit img{
-    width: auto;
-    height: auto;
-    max-width: 100vw;
+  width: 1100px;
+  max-width: none;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
-
 
 button {
     display: flex; /* 플렉스 박스를 사용 */
