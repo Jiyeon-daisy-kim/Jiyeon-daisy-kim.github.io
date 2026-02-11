@@ -18,7 +18,7 @@ nav-bar header,
 nav-bar .nav,
 nav-bar .nav-bar,
 nav-bar .container{
-  height: 12%;
+  height: 72px;
   display: flex;
   align-items: center;
   background: black;
@@ -32,7 +32,7 @@ nav-bar ul{
 
 /* 4) 본문이 고정 탑바 밑으로 들어가 겹치는 것 방지 */
 .dashboard{
-  margin-top: 12%;
+  margin-top: 72px;
 }
 
 /* 전체 레이아웃 컨테이너 */
@@ -192,9 +192,10 @@ nav-bar ul{
 
 /* 크레딧: 고정 너비 유지, 화면 좁아지면 가려짐 */
 #credit{
+  scroll-margin-top: 72px;
+  overflow: hidden;
   width: 100%;
   padding: 100px 0;
-  overflow: hidden;
 }
 
 #credit img{
