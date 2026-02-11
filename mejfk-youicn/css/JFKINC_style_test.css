@@ -2,6 +2,38 @@ body{
   background-color: black;
   margin: 0;
 }
+/* 1) 탑바가 비치지 않게, 풀폭 검정 고정 */
+nav-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  z-index: 2000;
+}
+
+/* 2) 탑바 안쪽 요소들이 위로 붙는 것 방지: 높이 고정 + 세로 가운데 */
+nav-bar nav,
+nav-bar header,
+nav-bar .nav,
+nav-bar .nav-bar,
+nav-bar .container{
+  height: 72px;
+  display: flex;
+  align-items: center;
+  background: black;
+}
+
+/* 3) ul 기본 마진 때문에 위로 뜨는 것 방지 */
+nav-bar ul{
+  margin: 0;
+  padding: 0;
+}
+
+/* 4) 본문이 고정 탑바 밑으로 들어가 겹치는 것 방지 */
+.dashboard{
+  margin-top: 96px;
+}
 
 /* 전체 레이아웃 컨테이너 */
 .frame{
