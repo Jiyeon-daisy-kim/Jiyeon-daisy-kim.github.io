@@ -297,3 +297,15 @@ nav-bar a {
 nav-bar a:hover {
   color: rgba(255, 255, 255, 1);
 }
+
+.director-header-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.director-header-img img {
+  max-width: 100%;
+  width: 500px;  
+  height: auto;
+}
