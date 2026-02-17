@@ -306,12 +306,17 @@ nav-bar a:hover {
 
 .director-header-img img {
   max-width: 100%;
-  width: 300px;  
+  width: 350px;  
   height: auto;
 }
 
 #director .director-inner {
-  width: 70%;
+  width: min(60%, 900px);
+  text-align: left;
   max-width: 900px;
   margin: 0 auto;
+}
+
+#director {
+  margin-top: 140px;
 }
