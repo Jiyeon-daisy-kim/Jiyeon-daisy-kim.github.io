@@ -8,8 +8,14 @@ body{
   margin: 2% 10%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   min-height: 100vh;
+}
+
+/* nav, footer는 전체 폭 유지 */
+nav-bar,
+footer-bar{
+  display: block;
+  width: 100%;
 }
 
 /* fixed-text 박스 제거 */
@@ -20,9 +26,7 @@ body{
 /* 본문 */
 .document{
   margin-top: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
 }
 
 /* 페이지 타이틀 */
@@ -34,8 +38,9 @@ body{
   text-align: center;
 }
 
-/* 필름 리스트 */
+/* 필름 리스트만 가운데 정렬 */
 .film-list{
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 56px;
@@ -44,6 +49,7 @@ body{
 
 /* 필름 아이템 */
 .film-item{
+  width: 100%;
   max-width: 780px;
   text-align: center;
 }
