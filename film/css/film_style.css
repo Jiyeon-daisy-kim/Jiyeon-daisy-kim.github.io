@@ -91,3 +91,74 @@ body{
     font-style: italic;
     line-height: 20px;
 }
+
+.page-title{
+  margin: 0 0 24px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.film-list{
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.film-item{
+  max-width: 780px;
+}
+
+.film-image-link{
+  display: block;
+}
+
+.film-image{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 14px 0;
+}
+
+.film-title{
+  margin: 0 0 8px 0;
+  font-family: "Espacio Novo", "Montserrat", sans-serif;
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.film-title a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.film-format{
+  margin: 0 0 14px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.film-credits p{
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.film-logline{
+  margin: 14px 0 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.film-links{
+  margin: 12px 0 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.film-links a{
+  text-decoration: underline;
+}
