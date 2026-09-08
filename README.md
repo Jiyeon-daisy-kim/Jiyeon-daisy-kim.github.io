@@ -36,3 +36,15 @@
 - 변경 후 GitHub Pages 반영까지 수 분 정도 소요될 수 있습니다.
 
 필요한 개선 아이디어나 이슈는 자유롭게 추가해 주세요. 😊
+
+
+## Color 포트폴리오
+
+- 새 페이지: `/color/`
+- 스타일: `color/css/color-style.css`
+- 작품 정보와 Vimeo 임베드: `color/index.html`
+- 공통 메뉴 두 파일에 Color 링크가 추가되어 있습니다.
+
+첫 작품은 사용자가 제공한 《Diario de una mano》(2025)입니다. Jiyeon Kim의 Colorist 크레딧, Al Este 2026 Best Experimental Short Film 수상과 The Downtown Festival 2025 “Night Cap” 상영 이력을 표시합니다. 수상 표시는 영화의 수상 이력이며 별도의 색보정상으로 표현하지 않습니다. Vimeo의 16초 영상은 전체 영화나 릴이 아닌 색보정 발췌 영상으로 표시합니다.
+
+기존 임시 감독 작품과 시안 안내는 제거했습니다. Vimeo 플레이어에는 직접 열기 링크를 함께 제공하며, 자동 재생은 사용하지 않습니다. 새 작품은 이 페이지에 추가할 수 있습니다. 기존 프로젝트 페이지, 도메인 및 배포 설정은 변경하지 않습니다.
