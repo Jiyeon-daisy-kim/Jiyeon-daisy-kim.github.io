@@ -8,7 +8,11 @@ if (typeof Swiper !== 'undefined') {
   });
 }
 const posterDialog = document.querySelector('#poster-dialog');
-document.querySelector('.poster-button').addEventListener('click', () => posterDialog.showModal());
+document.querySelector('.poster-button').addEventListener('click', () => {
+  const image = posterDialog.querySelector('img');
+  if (!image.hasAttribute('src')) image.src = image.dataset.src;
+  posterDialog.showModal();
+});
 document.querySelector('.dialog-close').addEventListener('click', () => posterDialog.close());
 posterDialog.addEventListener('click', (event) => {
   if (event.target === posterDialog) posterDialog.close();
