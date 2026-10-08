@@ -1,167 +1,54 @@
-
-body{
-    background-color: white;
-    overflow-x: hidden;
- }
- 
- .frame{
-     margin: 2% 10%;
-     display: flex;
-     flex-direction: column;
-     min-height: 100vh;
-     font-family: 'Montserrat', sans-serif;
- }
- 
- .fixed-text {
-     position: fixed;
-     top: 20%;
-     left: 5%;
-     width: 185px;
-     font-size: 12px;
-     background-color: rgba(255, 255, 255, 0.8);
-     padding: 10px;
-     border-radius: 5px;
-     z-index: 999;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-     line-height: 20px;
- }
-
-/* 여기까지는 기본 세팅 */
-
-.dashboard{
-    margin-top: 3%;
-    display: flex;
-    flex-direction: column;
+:root {
+  --page-gutter: clamp(20px, 8vw, 140px);
+  --navigation-font: Helvetica, "Helvetica Neue", Arial, "Pretendard", sans-serif;
+  --green: #328a63;
 }
-
-.zone1 img{
-    width: 25%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: #252a27; font-family: Helvetica, "Helvetica Neue", Arial, "Pretendard", sans-serif; -webkit-font-smoothing: antialiased; }
+:lang(ko) { font-family: "Pretendard", Helvetica, Arial, sans-serif; word-break: keep-all; overflow-wrap: anywhere; }
+.frame { padding: 0 var(--page-gutter); min-height: 100vh; }
+nav-bar { display: block; padding: 28px 0; }
+main { padding-bottom: clamp(48px, 7vw, 100px); }
+img { display: block; max-width: 100%; height: auto; }
+button { font: inherit; }
+button:focus-visible { outline: 2px solid var(--green); outline-offset: 5px; }
+.film-title { margin: clamp(20px, 4vw, 60px) auto clamp(24px, 4vw, 56px); width: clamp(190px, 25vw, 340px); max-width: 100%; }
+.stills-band { background: var(--green); margin-inline: calc(-1 * var(--page-gutter)); padding: clamp(16px, 3vw, 40px) var(--page-gutter); }
+.swiper { width: 100%; max-width: 1040px; }
+.swiper-slide { height: auto; align-self: center; }
+.swiper-slide img { width: 100%; }
+.swiper-button-next, .swiper-button-prev { color: #fff; width: 44px; height: 44px; border: 0; background: rgba(0,0,0,.16); border-radius: 50%; }
+.swiper-button-next::after, .swiper-button-prev::after { font-size: 20px; }
+.swiper button:focus-visible { outline-color: #fff; outline-offset: -4px; }
+.swiper-pagination-bullet { background: #fff; opacity: .5; }
+.swiper-pagination-bullet-active { opacity: 1; }
+.film-details { max-width: 1040px; margin: clamp(36px, 6vw, 80px) auto 0; display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
+h2 { margin: 0 0 22px; font-size: 13px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--green); }
+p { margin: 0 0 24px; font-size: 15px; line-height: 1.75; }
+p:last-child { margin-bottom: 0; }
+.synopsis p[lang="ko"] { color: #606762; line-height: 1.85; }
+.film-info { display: grid; grid-template-columns: minmax(110px, 160px) minmax(0, 1fr); gap: 24px; align-items: start; }
+.poster-button { padding: 0; border: 0; background: none; cursor: zoom-in; }
+.poster-button img { width: 100%; }
+.credits p { font-size: 13px; line-height: 1.8; }
+.credit-label { color: #707771; }
+.trailer { max-width: 1040px; margin: clamp(48px, 7vw, 100px) auto 0; padding-top: 28px; border-top: 1px solid #e1e7e2; }
+.trailer-video { width: 100%; aspect-ratio: 16 / 9; background: #111; }
+.trailer-video iframe { display: block; width: 100%; height: 100%; border: 0; }
+footer-bar { display: block; padding-bottom: 24px; }
+#poster-dialog { padding: 0; border: 0; max-width: 92vw; max-height: 92vh; max-height: 92dvh; background: transparent; overflow: visible; }
+#poster-dialog::backdrop { background: rgba(0,0,0,.86); }
+#poster-dialog img { max-height: 88vh; max-height: 88dvh; max-width: 88vw; width: auto; object-fit: contain; }
+.dialog-close { position: absolute; top: 8px; right: 8px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: #fff; color: #222; font-size: 28px; cursor: pointer; }
+body:has(#poster-dialog[open]) { overflow: hidden; }
+@media (max-width: 760px) {
+  nav-bar { padding: 22px 0; }
+  .film-details { grid-template-columns: 1fr; gap: 32px; }
+  .film-info { grid-template-columns: minmax(100px, 140px) minmax(0, 1fr); padding-top: 28px; border-top: 1px solid #e1e7e2; }
+  .stills-band { padding-inline: 0; padding-block: 14px; }
+  .swiper-button-prev { left: 8px; }
+  .swiper-button-next { right: 8px; }
+  .swiper-button-prev::after, .swiper-button-next::after { font-size: 16px; }
+  h2 { margin-bottom: 18px; }
 }
-
-.zone2{
-    position: relative; /* 페이지 구조상 위치를 절대상태로 변경 */
-    background-color: #328a63;
-    width: 100vw; 
-    left: 50%;
-    transform: translateX(-50%); /*자신의 너비와 높이만큼 빼서 진짜 가운데정렬*/
-}
-
-.zone2 img{
-    width: 65%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    
-}
-
-.zone3 {
-    margin-left: 10%;
-    margin-right: 10%;
-    display: flex;
-    flex-direction: row;
-    
-}
-
-.zone3-1{
-    width: 50%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Pretendard', sans-serif;
-}
-
-.zone3-1-1{
-    font-size: 16px;
-}
-
-.zone3-2{
-    width: 50%;
-    display: flex;
-
-}
-
-.zone3-2-1{
-    width: 20%;
-    margin-top: 16px;
-}
-
-.zone3-2-1 img{
-    width: 100%;
-}
-
-.zone3-2-2 {
-    width: 70;
-    display: flex;
-    margin-left: 16px;
-    padding-top: 0;
-    flex-direction: column;
-}
-
-
-.zone4{
-    margin-top: 8vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Pretendard', sans-serif;
-}
-
-
-.trailer-video {
-    position: relative;
-    width: 82.5%;
-    aspect-ratio: 16 / 9; /* 최신 CSS 비율 유지 방식 */
-    overflow: hidden;
-}
-
-.trailer-video iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-
-
-
-.swiper {
-    width: 65%;
-    height: auto;
-}
-  
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    color: white;       /* 버튼 화살표 색상 */
-    z-index: 10;        /* 다른 요소 위에 나오게 */
-    width: 44px;
-    height: 44px;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    color: rgba(255,255,255,0.6);
-    font-size: 24px; /* 화살표 크기 */
-}
-
-.swiper-scrollbar{
-    display: none !important;
-}
-
-.swiper-pagination-bullet{
-    background: rgba(255,255,255, 0.9) !important;
-}
-
-.swiper-pagination-bullet-active{
-    background: rgba(255,255,255, 0.6) !important;
-}
-
-
+@media (prefers-reduced-motion: reduce) { .swiper-wrapper { transition-duration: 0ms !important; } }
