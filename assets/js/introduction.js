@@ -16,6 +16,28 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(flower);
     setTimeout(() => flower.remove(), duration * 1000);
   }
-  createFlower();
-  setInterval(createFlower, 333);
+  let interval;
+  let startTimer;
+  let pageShown = false;
+  function resetFlowers() {
+    clearInterval(interval);
+    clearTimeout(startTimer);
+    document.querySelectorAll('.flower').forEach(flower => flower.remove());
+    if (!pageShown || document.hidden || reducedMotion.matches) return;
+    // Give the fully loaded page a clear first frame before starting snowfall.
+    startTimer = setTimeout(() => {
+      createFlower();
+      interval = setInterval(createFlower, 333);
+    }, 700);
+  }
+  window.addEventListener('pageshow', () => {
+    pageShown = true;
+    resetFlowers();
+  });
+  window.addEventListener('pagehide', () => {
+    pageShown = false;
+    resetFlowers();
+  });
+  document.addEventListener('visibilitychange', resetFlowers);
+  reducedMotion.addEventListener('change', resetFlowers);
 });
