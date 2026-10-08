@@ -146,6 +146,7 @@ class NavBar extends HTMLElement {
             <div class="dropdown-content">
               <a href="/mejfk-youicn/">Me:JFK, You:ICN</a>
               <a href="/hanam-cabbage/">Haenam Cabbage</a>
+              <a href="/how-to-plant-a-mimosa-tree/">How to Plant a Mimosa Tree</a>
               <a href="/suddenly-home/">Suddenly, Home</a>
               <a href="/case-of-R/">Case of 'r'</a>
             </div>
@@ -171,6 +172,7 @@ class NavBar extends HTMLElement {
         href === '/film/' &&
         (
           path.startsWith('/film') ||
+          path.startsWith('/how-to-plant-a-mimosa-tree') ||
           path.startsWith('/mejfk-youicn') ||
           path.startsWith('/hanam-cabbage') ||
           path.startsWith('/suddenly-home') ||

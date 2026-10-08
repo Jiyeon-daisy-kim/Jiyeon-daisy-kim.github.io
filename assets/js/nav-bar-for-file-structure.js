@@ -125,6 +125,20 @@ class NavBar extends HTMLElement {
         .dropdown-content a:hover {
           background-color: #f1f1f1;
         }
+
+        :host([layout="page"]) .navigator { position:relative; width:100%; gap:24px; }
+        :host([layout="page"]) .navigator ul { gap:22px; flex-wrap:wrap; justify-content:flex-end; }
+        :host([layout="page"]) .navigator li { margin:0; }
+        :host([layout="page"]) .nav-menu { font-size:16px; }
+        :host([layout="page"]) .dropdown { position:relative; }
+        :host([layout="page"]) .dropdown-content { right:0; min-width:220px; }
+        .dropdown:focus-within .dropdown-content { display:block; }
+        @media(max-width:700px) {
+          :host([layout="page"]) .navigator { flex-direction:column; align-items:flex-start; gap:18px; }
+          :host([layout="page"]) .navigator ul { justify-content:flex-start; gap:14px 18px; }
+          :host([layout="page"]) .nav-menu { font-size:14px; }
+          :host([layout="page"]) .flower-icon { width:22px; height:22px; }
+        }
       </style>
 
       <nav class="navigator">
@@ -143,6 +157,7 @@ class NavBar extends HTMLElement {
             <div class="dropdown-content">
               <a href="/mejfk-youicn/">Me:JFK, You:ICN</a>
               <a href="/hanam-cabbage/">Haenam Cabbage</a>
+              <a href="/how-to-plant-a-mimosa-tree/">How to Plant a Mimosa Tree</a>
               <a href="/suddenly-home/">Suddenly, Home</a>
               <a href="/case-of-R/">Case of 'r'</a>
             </div>
@@ -157,6 +172,7 @@ class NavBar extends HTMLElement {
     // Film 관련 하위 페이지
     const filmPages = [
       '/film/',
+      '/how-to-plant-a-mimosa-tree/',
       '/mejfk-youicn/',
       '/hanam-cabbage/',
       '/suddenly-home/',
