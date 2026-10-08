@@ -17,7 +17,7 @@ body {
 }
 
 body {
-    background-image: url('/assets/images/Home_jfk_icn_bacground_img%20copy.webp');
+    background-image: url('/assets/images/home-jfk-icn-1920.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -36,7 +36,7 @@ body {
 /* 모바일에서도 같은 이미지만 사용 */
 @media (max-width: 480px) {
     body {
-        background-image: url('/assets/images/Home_jfk_icn_bacground_img%20copy.webp');
+        background-image: url('/assets/images/home-jfk-icn-1920.webp');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
