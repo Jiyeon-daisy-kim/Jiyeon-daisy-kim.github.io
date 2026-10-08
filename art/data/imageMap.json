@@ -1,10 +1,135 @@
 [
-    {
-      "src": "img/i-really-hate-birthday-feelings/irhbf_back.png",
-      "page": "irhbf.html"
-    },
-    {
-      "src": "",
-      "page": "pages/detail2.html"
-    }
-  ]
+  {
+    "id": "birthday",
+    "title": "I really hate birthday feeling",
+    "year": "2025",
+    "subtitle": "생일 기분 정말 싫어",
+    "medium": "Digital photography, inkjet print, scotch tape, embroidery thread on paper",
+    "thumbnail": "img/web/birthday-thumb.webp",
+    "front": "img/web/birthday-front.webp",
+    "back": "img/web/birthday-back.webp",
+    "width": 1800,
+    "height": 1173,
+    "details": [
+      {
+        "title": "Hello from the space",
+        "image": "img/web/birthday-detail-1.webp",
+        "rect": [
+          2.666666666666667,
+          20.034100596760442,
+          6.555555555555556,
+          13.299232736572892
+        ]
+      },
+      {
+        "title": "Squid Game",
+        "image": "img/web/birthday-detail-2.webp",
+        "rect": [
+          29.333333333333332,
+          11.082693947144074,
+          12.777777777777777,
+          12.87297527706735
+        ]
+      },
+      {
+        "title": "Tears of Crocodile",
+        "image": "img/web/birthday-detail-3.webp",
+        "rect": [
+          72.55555555555556,
+          34.44160272804774,
+          8.777777777777777,
+          11.3384484228474
+        ]
+      },
+      {
+        "title": "Any Questions",
+        "image": "img/web/birthday-detail-4.webp",
+        "rect": [
+          14.444444444444443,
+          65.47314578005115,
+          18.555555555555557,
+          20.20460358056266
+        ]
+      },
+      {
+        "title": "Please let me g",
+        "image": "img/web/birthday-detail-5.webp",
+        "rect": [
+          14.666666666666666,
+          31.798806479113384,
+          9.777777777777779,
+          11.84995737425405
+        ]
+      },
+      {
+        "title": "There is a bear",
+        "image": "img/web/birthday-detail-6.webp",
+        "rect": [
+          27.166666666666668,
+          73.06052855924978,
+          17.5,
+          25.063938618925828
+        ]
+      },
+      {
+        "title": "Cherry on top",
+        "image": "img/web/birthday-detail-7.webp",
+        "rect": [
+          59.05555555555555,
+          6.479113384484228,
+          39.94444444444444,
+          43.39300937766411
+        ]
+      },
+      {
+        "title": "Fly to the moon",
+        "image": "img/web/birthday-detail-8.webp",
+        "rect": [
+          90.05555555555556,
+          60.44330775788577,
+          7.888888888888888,
+          27.706734867860188
+        ]
+      },
+      {
+        "title": "The Whale",
+        "image": "img/web/birthday-detail-9.webp",
+        "rect": [
+          74.94444444444444,
+          50.127877237851656,
+          10.277777777777777,
+          23.6999147485081
+        ]
+      },
+      {
+        "title": "Hey Cupid",
+        "image": "img/web/birthday-detail-10.webp",
+        "rect": [
+          33.72222222222222,
+          19.18158567774936,
+          29.555555555555557,
+          30.69053708439898
+        ]
+      }
+    ],
+    "english": [
+      "Birthdays are just proof that a year has ended well, but somehow, I feel like they should be special. The feeling of being surrounded by many people and having to open presents makes me excited and then depressed. I drew digitally a scene of a party with many people on paper. The people were alone, lonely, and quiet.",
+      "The title is inspired by the song ‘Birthday Mood’ by my favorite band, Sister's Barbershop."
+    ],
+    "korean": [
+      "생일은 1년을 잘 마쳤다는 증거에 불과한데 왠지 특별해야 할 것 같다. 많은 사람들에게 둘러싸여 선물을 뜯어야 할 것 같은 생일 날의 기분은 나를 들뜨게 만들었다가 침울하게 만든다. 다양한 사람들이 함께하는 파티의 장면을 종이 위에 디지털로 그렸다. 혼자, 그리고 외롭고 조용하게.",
+      "제목은 좋아하는 밴드 ‘언니네 이발관’의 노래 ‘생일 기분’에서 영감을 받았다."
+    ]
+  },
+  {
+    "id": "sausage-twig",
+    "title": "Sausage Twig",
+    "thumbnail": "img/web/sausage-thumb.webp",
+    "front": "img/web/sausage-twig.webp",
+    "width": 2152,
+    "height": 3317,
+    "details": [],
+    "english": [],
+    "korean": []
+  }
+]
