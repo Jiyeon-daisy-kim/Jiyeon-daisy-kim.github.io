@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daisyeon</title>
+  <title>Films | Jiyeon Kim</title>
 
   <!-- Espacio Novo font -->
   <link rel="stylesheet" href="../assets/css/espacio_novo_font.css">
 
-  <link rel="stylesheet" type="text/css" href="css/film_style.css">
+  <link rel="stylesheet" type="text/css" href="css/film_style.css?v=20261008">
   <link rel="icon" href="../assets/images/favicon.png" type="image/png">
 
-  <script src="../assets/js/nav-bar-for-file-structure.js?v=20260908b" defer></script>
+  <script src="../assets/js/nav-bar-for-file-structure.js?v=20261008" defer></script>
   <script src="../assets/js/footer-bar-for-file-structure.js" defer></script>
 
   <!-- montserrat font -->
@@ -20,22 +20,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <div class="fixed-text">
-    <p><strong>My life</strong> is an adventure,<br>
-      which can save <strong>A person</strong>’s world.<br>
-      <i>So Film it, as to live.</i>
-    </p>
-    <p>Daisy for the world<br>
-      Yeon for the root
-    </p>
-  </div>
+<body><a class="skip" href="#main">Skip to films</a>
+
 
   <div class="frame">
-    <nav-bar></nav-bar>
+    <nav-bar layout="page"></nav-bar>
 
-    <div class="document">
-      <h1 class="page-title">FILM</h1>
+    <main class="document" id="main">
+      <div class="page-heading"><h1 class="page-title">Film</h1><p>Selected works by Jiyeon Kim</p></div>
 
       <section class="film-list">
 
@@ -51,9 +43,9 @@
 
           <p class="film-format">Short Film, Drama, 17 mins, 2025, USA, KR</p>
 
-          <p class="film-logline">
+          <details class="film-details"><summary>About the film</summary><p class="film-logline">
             A young flight attendant Ina is suffering to find a way to go back home on National Children’s Day to please her parents and to attend her brother’s wedding ceremony who sexually abused her. She finds a way to break the trauma and start a new life.
-          </p>
+          </p></details>
 
           <p class="film-links">
             <a href="../mejfk-youicn/">VIEW PROJECT</a>
@@ -72,15 +64,16 @@
 
           <p class="film-format">Short Film, Drama, 17mm, KR</p>
 
-          <p class="film-logline">
+          <details class="film-details"><summary>About the film</summary><p class="film-logline">
             Sua, a college student, visited a kitchen with full of cabbage in a welfare center. Sua tries to make volunteer work done among middle-aged volunteers, but she feels increasingly uncomfortable among many nosy adults.
-          </p>
+          </p></details>
 
           <p class="film-links">
             <a href="../hanam-cabbage/">VIEW PROJECT</a>
           </p>
         </article>
 
+<article class="film-item"><a class="film-image-link" href="/how-to-plant-a-mimosa-tree/"><img class="film-image" src="/how-to-plant-a-mimosa-tree/img/mimosa_still.webp" alt="How to Plant a Mimosa Tree" loading="lazy"></a><h2 class="film-title"><a href="/how-to-plant-a-mimosa-tree/">How to Plant a Mimosa Tree</a></h2><p class="film-format">Experimental short · 3 min</p><details class="film-details"><summary>About the film</summary><p class="film-logline">Mimosa Tree knows how to sleep in the nighttime.</p></details><p class="film-links"><a href="/how-to-plant-a-mimosa-tree/">View film →</a></p></article>
         <!-- 3) THERE IS A FLY -->
         <article class="film-item">
           <img class="film-image" src="img/there_is_a_fly.webp" alt="THERE IS A FLY">
@@ -89,14 +82,14 @@
 
           <p class="film-format">Short Film, Experimental, Super 16mm, USA</p>
 
-          <p class="film-logline">
+          <details class="film-details"><summary>About the film</summary><p class="film-logline">
             There is a fly. The boy is trying to find it. / 3 min
           </p>
 
           <div class="film-credits">
             <p>2024 Big Shoulder’s International Student Film Festival Selection</p>
             <p>(Best Experimental Film winner)</p>
-          </div>
+          </div></details>
         </article>
 
         <!-- 4) Suddenly, Home -->
@@ -111,14 +104,14 @@
 
           <p class="film-format">Short Film, Narrative, South Korea</p>
 
-          <p class="film-logline">
+          <details class="film-details"><summary>About the film</summary><p class="film-logline">
             Seungyeon visits home for the first time in a long time to celebrate her mother’s birthday. The house is empty, and unintelligible words come out of mother’s mouth. / 3 min
           </p>
 
           <div class="film-credits">
             <p>Directed and written by Jiyeon Kim</p>
             <p>Sponsored by 2024 Korean Film Council (7000$)</p>
-          </div>
+          </div></details>
 
           <p class="film-links">
             <a href="../suddenly-home/">VIEW PROJECT</a>
@@ -137,9 +130,9 @@
 
           <p class="film-format">Short Film</p>
 
-          <p class="film-logline">
+          <details class="film-details"><summary>About the film</summary><p class="film-logline">
             Two people disappeared from a university. Two detectives begin an investigation to find the whereabouts of the missing women.
-          </p>
+          </p></details>
 
           <p class="film-links">
             <a href="../case-of-R/">VIEW PROJECT</a>
@@ -147,7 +140,7 @@
         </article>
 
       </section>
-    </div>
+    </main>
 
     <footer-bar></footer-bar>
   </div>
