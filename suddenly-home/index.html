@@ -1,168 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Daisyeon</title>
-
-	<!-- Espacio Novo 글씨체-->
-	<link rel="stylesheet" href="../assets/css/espacio_novo_font.css">
-
-	<link rel="stylesheet" type="text/css" href="css/suddenlyHome_style.css">
-	<link rel="icon" href="../assets/images/favicon.png" type="image/png">
-
-	<!-- montserrat 글씨체 -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-	<!-- pretendad 글씨체 -->
-	<script>
-		(function(d) {
-		  var config = {
-			kitId: 'qme8xbq',
-			scriptTimeout: 3000,
-			async: true
-		  },
-		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-		})(document);
-	</script>
-	  
-	  <!-- swiper 슬라이드 -->
-	<link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-	/>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-
-	<script src="../assets/js/footer-bar-for-file-structure.js" defer></script>
-	<script src="../assets/js/nav-bar-for-file-structure.js?v=20261008" defer></script>
-</head>
-
-<body>
-	<!-- 이미지 슬라이드 관련 -->
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-		  const swiper = new Swiper('.swiper', {
-			direction: 'horizontal', // vertical이면 세로 슬라이드
-			loop: true,
-			pagination: {
-			  el: '.swiper-pagination',
-			  clickable: true
-			},
-			navigation: {
-			  nextEl: '.swiper-button-next',
-			  prevEl: '.swiper-button-prev'
-			},
-			scrollbar: {
-			  el: '.swiper-scrollbar'
-			},
-			autoplay: {
-			  delay: 4000,
-			  disableOnInteraction: false
-			}
-		  });
-		});
-	</script>
-
-	<!-- 프레임 정렬 관련 -->
-
-	
-
-	<div class="frame">
-		<nav-bar></nav-bar>
-
-		<div class="fixed-text">
-			<p><strong>My life</strong> is an adventure,<br>
-			which can save <strong>A person</strong>’s world.<br>
-			<i>So Film it, as to live.</i></p>
-			<p>Daisy for the world<br>
-			Yeon for the root</p>
-		</div>
-
-		<div class="dashboard">
-			<div class="zone1"> 
-				<img class="zone1-1" src="img/suddenly_home_poster_1_2.jpg">
-				<div class="zone1-2">
-
-					<div class="zone1-2-3">
-						<strong>SUDDENLY, HOME</strong>
-					</div>
-					<div class="zone1-2-1">
-						<p>갑자기 분위기 스바시바</p>
-					</div>
-					<div class="zone1-2-2">
-						<div class="zone1-2-2-1">
-							<p>Directed, Written by Jiyeon Kim
-								<br>Sponsored by Korean Film Council
-								<br>
-							</p>
-						</div>
-						<div class="zone1-2-2-1">
-							<p>2024 Berlin Lift Off Film Festival
-								<br>2024 Indie Film Fest Final Awards Nominee
-								<br>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="zone2">
-				<div class="zone2-1">
-					Seungyeon returns home, hoping to reconcile with her estranged mother,
-					 <br>only to face verbal abuse.
-					 <br>But when she discovers her mother has dementia,
-					 <br>resentment gives way to regret—and an ordinary day becomes a quiet reunion.
-				</div>
-				<div class="zone2-2">
-					승연은 오래 전에 가출한 집에, 엄마의 생일을 맞아서 화해를 위해 찾아간다.
-					<br>하지만 엄마인 민수는 승연에게 다짜고짜 욕을 한다.
-					<br>상처받은 승연은 자신의 동생, 지원에게 엄마의 근황을 묻는다.
-					<br>엄마가 사실은 치매를 앓고 있었음을 알게 된 승연은
-					<br>미안함과 섭섭함을 토로하지만 민수는 함께 맞이한 ‘그냥의 오늘’에 기뻐한다.
-				</div>
-			</div>
-			
-			
-			<div class="trailer-video">
-				<iframe src="https://player.vimeo.com/video/1009516569" 
-						frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-				</iframe>
-			</div>
-
-			<div class="swiper">
-				<div class="swiper-wrapper">
-				  <div class="swiper-slide">
-					<img src="img/GAB still1.png" alt="이미지1" />
-				  </div>
-				  <div class="swiper-slide">
-					<img src="img/Suddenly, Home Still 1.jpg" alt="이미지2" />
-				  </div>
-				  <div class="swiper-slide">
-					<img src="img/Suddenly, Home Still 2.jpg" alt="이미지3" />
-				  </div>
-				  <div class="swiper-slide">
-					<img src="img/Suddenly, Home Still 3.jpg" alt="이미지3" />
-				  </div>
-				  <div class="swiper-slide">
-					<img src="img/Suddenly, Home Still 4.jpg" alt="이미지3" />
-				  </div>
-				</div>
-			
-				<!-- 옵션 UI들 -->
-				<div class="swiper-pagination"></div>
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
-				<div class="swiper-scrollbar">
-				</div>
-			</div>
-
-		</div>
-
-		<footer-bar></footer-bar>
-	</div>
-</body>
-
-</html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suddenly, Home | Jiyeon Kim</title><meta name="description" content="Suddenly, Home, written and directed by Jiyeon Kim. Synopsis, trailer, film stills and festival information.">
+<link rel="icon" href="/assets/images/favicon.png"><link rel="stylesheet" href="/assets/css/espacio_novo_font.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<link rel="stylesheet" href="css/suddenlyHome_style.css?v=20261008b">
+<script src="/assets/js/nav-bar-for-file-structure.js?v=20261008b" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script><script src="js/gallery.js" defer></script>
+</head><body><a class="skip" href="#main">Skip to film</a><div class="page"><header><nav-bar layout="page"></nav-bar></header>
+<main id="main"><a class="back" href="/film/">← All films</a>
+<section class="film-intro" aria-labelledby="film-title"><a class="poster-link" href="img/suddenly_home_poster_1_2.jpg" target="_blank" rel="noopener" aria-label="Open full poster"><img class="poster" src="img/suddenly_home_poster_1_2.jpg" alt="Suddenly, Home film poster"></a><div class="intro-copy"><p class="eyebrow">A FILM BY JIYEON KIM</p><h1 id="film-title">Suddenly,<br>Home</h1><p class="korean-title" lang="ko">갑자기 분위기 스바시바</p><dl class="production"><div><dt>Written & directed by</dt><dd>Jiyeon Kim</dd></div><div><dt>Supported by</dt><dd>Korean Film Council</dd></div></dl><a class="watch-link" href="#trailer">Watch trailer ↓</a></div></section>
+<section class="synopsis-section" aria-labelledby="synopsis-title"><h2 id="synopsis-title">Synopsis</h2><div class="synopses"><p lang="en">Seungyeon returns home, hoping to reconcile with her estranged mother, only to face verbal abuse. But when she discovers her mother has dementia, resentment gives way to regret, and an ordinary day becomes a quiet reunion.</p><p lang="ko">승연은 오래 전에 가출한 집에, 엄마의 생일을 맞아서 화해를 위해 찾아간다. 하지만 엄마인 민수는 승연에게 다짜고짜 욕을 한다. 상처받은 승연은 자신의 동생, 지원에게 엄마의 근황을 묻는다. 엄마가 사실은 치매를 앓고 있었음을 알게 된 승연은 미안함과 섭섭함을 토로하지만 민수는 함께 맞이한 ‘그냥의 오늘’에 기뻐한다.</p></div></section>
+<section class="festivals" aria-labelledby="festivals-title"><h2 id="festivals-title">Festivals</h2><ul><li><span>2024</span><div>Berlin Lift Off Film Festival</div></li><li><span>2024</span><div>Indie Film Fest<small>Final Awards Nominee</small></div></li></ul></section>
+<section id="trailer" class="trailer" aria-labelledby="trailer-title"><div class="section-top"><h2 id="trailer-title">Trailer</h2><a href="https://vimeo.com/1009516569" target="_blank" rel="noopener">Open on Vimeo ↗</a></div><div class="video"><iframe src="https://player.vimeo.com/video/1009516569?dnt=1" title="Suddenly, Home trailer" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></section>
+<section class="stills" aria-labelledby="stills-title"><h2 id="stills-title">Film stills</h2><div class="swiper" aria-label="Suddenly, Home film stills"><div class="swiper-wrapper">
+<div class="swiper-slide"><a href="img/GAB%20still1.png" target="_blank" rel="noopener"><img src="img/GAB%20still1.png" alt="Suddenly, Home film still 1" loading="lazy"></a></div>
+<div class="swiper-slide"><a href="img/Suddenly,%20Home%20Still%201.jpg" target="_blank" rel="noopener"><img src="img/Suddenly,%20Home%20Still%201.jpg" alt="Suddenly, Home film still 2" loading="lazy"></a></div>
+<div class="swiper-slide"><a href="img/Suddenly,%20Home%20Still%202.jpg" target="_blank" rel="noopener"><img src="img/Suddenly,%20Home%20Still%202.jpg" alt="Suddenly, Home film still 3" loading="lazy"></a></div>
+<div class="swiper-slide"><a href="img/Suddenly,%20Home%20Still%203.jpg" target="_blank" rel="noopener"><img src="img/Suddenly,%20Home%20Still%203.jpg" alt="Suddenly, Home film still 4" loading="lazy"></a></div>
+<div class="swiper-slide"><a href="img/Suddenly,%20Home%20Still%204.jpg" target="_blank" rel="noopener"><img src="img/Suddenly,%20Home%20Still%204.jpg" alt="Suddenly, Home film still 5" loading="lazy"></a></div>
+</div></div><div class="gallery-controls"><button class="gallery-prev" aria-label="Previous still">←</button><div class="gallery-count" aria-live="polite">1 / 5</div><button class="gallery-next" aria-label="Next still">→</button></div></section>
+</main><footer><a href="/film/">← All films</a><a href="mailto:daisyeonfilm@gmail.com">daisyeonfilm@gmail.com</a><span>© Jiyeon Kim</span></footer></div></body></html>

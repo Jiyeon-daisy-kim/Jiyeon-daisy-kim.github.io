@@ -43,7 +43,7 @@ class NavBar extends HTMLElement {
           z-index: 1000;
           position: fixed;
           width: 80%;
-          font-family: 'Pretendard', sans-serif;
+          font-family: var(--navigation-font, 'Pretendard'), sans-serif;
         }
 
         .site-name {
