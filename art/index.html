@@ -1,70 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Daisyeon</title>
-
-	<!-- Espacio Novo 글씨체-->
-	<link rel="stylesheet" href="../assets/css/espacio_novo_font.css">
-
-	<!-- pretendad 글씨체 -->
-	<script src="../assets/js/pretendad-font.js"></script>
-
-	<!-- montserrat 글씨체 -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-	<!-- favicon, css-->
-	<link rel="stylesheet" type="text/css" href="css/art_work_style.css">
-	<link rel="icon" href="../assets/images/favicon.png" type="image/png">
-
-	<!-- 네비게이션, footer dom js-->
-	<script src="../assets/js/footer-bar-for-file-structure.js" defer></script>
-	<script src="../assets/js/nav-bar-for-file-structure.js?v=20261008" defer></script>
-
-
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artwork | Daisyeon</title>
+  <link rel="stylesheet" href="../assets/css/espacio_novo_font.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="css/art_work_style.css?v=20261008i">
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png">
+  <script src="../assets/js/nav-bar-for-file-structure.js?v=20261008b" defer></script>
+  <script src="../assets/js/footer-bar-for-file-structure.js" defer></script>
+  <script src="js/art-gallery.js?v=20261008i" defer></script>
 </head>
-
 <body>
-	<div class="frame">
-	  <nav-bar></nav-bar>
-	</div>
-	<main class="artwork-layout">
-		<section class="image-column scroll-area" id="imageColumn">
-		  <!-- 이미지들이 여기에 계속 추가됨 -->
-		</section>
-	  
-		<section class="side-column scroll-area">
-			<iframe id="detailViewer" src="" frameborder="0"></iframe>
-		</section>
-	</main>
-  
-
-	<script>
-		const imageColumn = document.getElementById('imageColumn');
-		const iframe = document.getElementById('detailViewer')
-	  
-
-		fetch('data/imageMap.json')
-			.then(res => res.json())
-			.then(images => {
-				images.forEach(item => {
-				const img = document.createElement('img');
-				img.src = item.src;
-				img.classList.add('art-image');
-				img.style.cursor = 'pointer';
-				img.addEventListener('click', () => {
-					iframe.src = item.page;
-				});
-				imageColumn.appendChild(img);
-			});
-		});
-
-
-	  </script>
+  <div class="frame">
+    <nav-bar layout="page"></nav-bar>
+    <main>
+      <h1 class="page-title">Artwork</h1>
+      <div class="artwork-layout">
+        <nav id="artwork-list" class="artwork-list" aria-label="Select an artwork"></nav>
+        <section id="artwork-viewer" class="artwork-viewer" aria-label="Selected artwork" aria-busy="true">
+          <p id="gallery-status" role="status">Loading artwork…</p>
+        </section>
+      </div>
+      <noscript><p>Enable JavaScript to explore the artwork and its details.</p></noscript>
+    </main>
+    <footer-bar></footer-bar>
+  </div>
+  <dialog id="detail-dialog" aria-labelledby="detail-title">
+    <div class="dialog-toolbar">
+      <h2 id="detail-title"></h2>
+      <button id="close-detail" type="button" aria-label="Close detail">×</button>
+    </div>
+    <p id="detail-status" role="status"></p>
+    <img id="detail-image" alt="">
+    <div class="detail-navigation">
+      <button id="previous-detail" type="button">← Previous</button>
+      <span id="detail-count" aria-live="polite"></span>
+      <button id="next-detail" type="button">Next →</button>
+    </div>
+  </dialog>
 </body>
 </html>
