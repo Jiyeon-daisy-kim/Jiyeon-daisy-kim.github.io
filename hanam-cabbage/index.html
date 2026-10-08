@@ -1,202 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Daisyeon</title>
-
-	<!-- Espacio Novo 글씨체-->
-	<link rel="stylesheet" href="../assets/css/espacio_novo_font.css">
-	
-	<link rel="stylesheet" type="text/css" href="css/haenam_cabbage_style.css">
-	<link rel="icon" href="../assets/images/favicon.png" type="image/png">
-
-
-	<script src="../assets/js/footer-bar-for-file-structure.js" defer></script>
-	<script src="../assets/js/nav-bar-for-file-structure.js?v=20261008" defer></script>
-
-	
-
-	<!-- montserrat 글씨체 -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-	<!-- pretendad 글씨체 -->
-	<script>
-		(function(d) {
-		  var config = {
-			kitId: 'qme8xbq',
-			scriptTimeout: 3000,
-			async: true
-		  },
-		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-		})(document);
-	</script>
-
-
-	<!-- swiper 슬라이드 -->
-	<link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-	/>
-
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haenam Cabbage | Daisyeon</title>
+  <link rel="stylesheet" href="../assets/css/espacio_novo_font.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/haenam_cabbage_style.css?v=20261008c">
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png">
+  <script src="../assets/js/footer-bar-for-file-structure.js" defer></script>
+  <script src="../assets/js/nav-bar-for-file-structure.js?v=20261008b" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+  <script src="js/haenam-cabbage.js" defer></script>
 </head>
-
 <body>
-
-	<!-- 이미지 슬라이드 관련 -->
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-		  const swiper = new Swiper('.swiper', {
-			direction: 'horizontal', // vertical이면 세로 슬라이드
-			loop: true,
-			pagination: {
-			  el: '.swiper-pagination',
-			  clickable: true
-			},
-			navigation: {
-			  nextEl: '.swiper-button-next',
-			  prevEl: '.swiper-button-prev'
-			},
-			scrollbar: {
-			  el: '.swiper-scrollbar'
-			},
-			autoplay: {
-			  delay: 4000,
-			  disableOnInteraction: false
-			}
-		  });
-		});
-	</script>
-
-
-	<div class="frame">
-		
-		<nav-bar></nav-bar>
-		
-		<div class="dashboard">
-			<div class ="zone1">
-				<img src="img/Haenam_title_brush_green.png">
-			</div>
-			<div class ="zone2">
-				<div class="swiper">
-					<div class="swiper-wrapper">
-					  <div class="swiper-slide">
-						<img src="img/Haenam_Low_002.jpg" alt="이미지1" />
-					  </div>
-					  <div class="swiper-slide">
-						<img src="img/Haenam_Low_001.jpg" alt="이미지1" />
-					  </div>
-					  <div class="swiper-slide">
-						<img src="img/Haenam_Low_003.jpg" alt="이미지1" />
-					  </div>
-					</div>
-				
-					<!-- 옵션 UI들 -->
-					<div class="swiper-pagination"></div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-scrollbar">
-					</div>
-				</div>
-			</div>
-			<div class ="zone3">
-				<div class ="zone3-1">
-					<div class="zone3-1-1">
-						<p>
-							Synopsis
-						</p>
-					</div>
-					<div class="zone3-1-2">
-						<p>
-							Sua, a college student, visited a kitchen 
-							<br>with a full of cabbages in a welfare center. 
-							<br>Sua tries to get volunteer work done 
-							<br>among middle-aged volunteers, 
-							<br>but she feels increasingly uncomfortable 
-							<br>among many nosy adults. 
-						</p>
-					</div>
-					<div class="zone3-1-3">
-						배추가 가득 있는 복지관 급식소에 대학생 수아가 찾아 왔다. 
-						<br>수아는 중년 봉사자들 틈에서 봉사 시간을 얻기 위해 애쓰지만, 
-						<br>오지랖 많은 어른들 사이에서 점점 불편함을 느껴간다.
-
-					</div>
-				</div>
-				<div class ="zone3-2">
-					<div class="zone3-2-1">
-						<img src="img/Haenam_Poster_Low.jpg" id="posterImg" style="cursor: pointer;">
-					</div>
-					<div class="zone3-2-2">
-						<div class="zone3-2-2-1">
-							<p>
-								Narative short film, drama, USA
-								<br>17 mins
-							</p>
-						</div>
-						<div class="zone3-2-2-2">
-							<p>
-								Directed/Written by
-								<br>Jyeon Kim
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-			<div class ="zone4">
-				<div class ="zone4-1">
-					<p>
-						TRAILER
-					</p>
-				</div>
-				<div class="trailer-video">
-					<iframe src="https://player.vimeo.com/video/1058818345" 
-							frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-					</iframe>
-				</div>
-			</div>
-
-			
-
-
-		</div>
-
-		<footer-bar></footer-bar>
-	</div>
-
-	<!-- 포스터 확대용 모달 -->
-	<div id="posterModal" style="display:none; position:fixed; top:0; left:0;
-	  width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center;
-	  align-items:center; z-index:9999;">
-		<img id="posterModalImg" src="" style="max-width:90%; max-height:90%;
-		  border-radius:0px; box-shadow:0 0 30px rgba(255, 255, 255, 0.1);">
-  	</div>
-	
-	<script>
-	document.addEventListener('DOMContentLoaded', function () {
-		const poster = document.getElementById('posterImg');
-		const modal = document.getElementById('posterModal');
-		const modalImg = document.getElementById('posterModalImg');
-	
-		poster.addEventListener('click', function () {
-		modal.style.display = 'flex';
-		modalImg.src = this.src;
-		});
-	
-		modal.addEventListener('click', function (e) {
-		// 이미지 밖 영역 클릭 시 닫기
-		if (e.target === modal) {
-			modal.style.display = 'none';
-		}
-		});
-	});
-	</script>
-
+  <div class="frame">
+    <nav-bar layout="page"></nav-bar>
+    <main>
+      <h1 class="film-title"><img src="img/Haenam_title_brush_green.png" alt="Haenam Cabbage · 해남배추"></h1>
+      <section class="stills-band" aria-label="Film stills">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/Haenam_Low_002.jpg" alt="Haenam Cabbage film still 1"></div>
+            <div class="swiper-slide"><img src="img/Haenam_Low_001.jpg" alt="Haenam Cabbage film still 2" loading="lazy"></div>
+            <div class="swiper-slide"><img src="img/Haenam_Low_003.jpg" alt="Haenam Cabbage film still 3" loading="lazy"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <button class="swiper-button-prev" type="button" aria-label="Previous still"></button>
+          <button class="swiper-button-next" type="button" aria-label="Next still"></button>
+        </div>
+      </section>
+      <div class="film-details">
+        <section class="synopsis" aria-labelledby="synopsis-title">
+          <h2 id="synopsis-title">Synopsis</h2>
+          <p>Sua, a college student, visited a kitchen with a full of cabbages in a welfare center. Sua tries to get volunteer work done among middle-aged volunteers, but she feels increasingly uncomfortable among many nosy adults.</p>
+          <p lang="ko">배추가 가득 있는 복지관 급식소에 대학생 수아가 찾아 왔다. 수아는 중년 봉사자들 틈에서 봉사 시간을 얻기 위해 애쓰지만, 오지랖 많은 어른들 사이에서 점점 불편함을 느껴간다.</p>
+        </section>
+        <aside class="film-info" aria-label="Film information">
+          <button class="poster-button" type="button" aria-label="Enlarge Haenam Cabbage poster" aria-haspopup="dialog">
+            <img src="img/Haenam_Poster_Low.jpg" alt="Haenam Cabbage poster" loading="lazy">
+          </button>
+          <div class="credits">
+            <p>Narrative short film<br>Drama, USA<br>17 mins</p>
+            <p><span class="credit-label">Directed / Written by</span><br>Jiyeon Kim</p>
+          </div>
+        </aside>
+      </div>
+      <section class="trailer" aria-labelledby="trailer-title">
+        <h2 id="trailer-title">Trailer</h2>
+        <div class="trailer-video">
+          <iframe src="https://player.vimeo.com/video/1058818345" title="Haenam Cabbage trailer" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
+    </main>
+    <footer-bar></footer-bar>
+  </div>
+  <dialog id="poster-dialog" aria-label="Haenam Cabbage poster">
+    <button class="dialog-close" type="button" aria-label="Close poster">×</button>
+    <img src="img/Haenam_Poster_Low.jpg" alt="Haenam Cabbage poster" loading="lazy">
+  </dialog>
 </body>
 </html>
