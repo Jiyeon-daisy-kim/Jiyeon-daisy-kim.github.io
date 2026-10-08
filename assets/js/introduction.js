@@ -1,27 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
-    function createFlower() {
-        const flower = document.createElement("img");
-        flower.src = "../assets/images/daisy_flower.png"; // 꽃 이미지 경로
-        flower.classList.add("flower");
-
-        // 랜덤 위치 및 크기 설정
-        const startX = Math.random() * window.innerWidth;
-        const duration = Math.random() * 4 + 6; // 6~10초 동안 떨어짐
-        const size = Math.random() * 30 + 20; // 크기 20~40px 랜덤
-
-        flower.style.left = `${startX}px`;
-        flower.style.width = `${size}px`;
-        flower.style.height = `${size}px`;
-        flower.style.animationDuration = `${duration}s`;
-
-        document.body.appendChild(flower);
-
-        // 애니메이션이 끝나면 요소 제거 (메모리 누수 방지)
-        setTimeout(() => {
-            flower.remove();
-        }, duration * 1000);
-    }
-
-    // 일정 간격으로 꽃 생성
-    setInterval(createFlower, 333);
+document.addEventListener('DOMContentLoaded', () => {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function createFlower() {
+    if (document.hidden || reducedMotion.matches) return;
+    const flower = document.createElement('img');
+    flower.src = '../assets/images/daisy_flower.png';
+    flower.alt = '';
+    flower.setAttribute('aria-hidden', 'true');
+    flower.className = 'flower';
+    const size = Math.random() * 30 + 20;
+    const duration = Math.random() * 4 + 6;
+    flower.style.left = `${Math.random() * Math.max(0, window.innerWidth - size)}px`;
+    flower.style.width = `${size}px`;
+    flower.style.height = `${size}px`;
+    flower.style.animationDuration = `${duration}s`;
+    document.body.appendChild(flower);
+    setTimeout(() => flower.remove(), duration * 1000);
+  }
+  createFlower();
+  setInterval(createFlower, 333);
 });
