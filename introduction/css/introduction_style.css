@@ -27,13 +27,13 @@ a:hover { color: #766d3b; }
 a:focus-visible { outline: 2px solid #766d3b; outline-offset: 5px; }
 .cv-sections { margin: clamp(64px, 9vw, 120px) 0 80px; }
 .cv-row { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(40px, 7vw, 100px); padding: 38px 0 48px; border-top: 1px solid var(--line); }
-.cv-label { margin: 0; font-size: 12px; font-weight: 500; line-height: 1.6; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+.cv-label { margin: 0; font-size: 12px; font-weight: 400; line-height: 1.6; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
 .cv-details { min-width: 0; }
 .cv-entry { padding: 0 0 22px; margin-bottom: 22px; border-bottom: 1px solid var(--line); }
 .cv-entry:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
 .cv-entry header { display: flex; flex-direction: column; gap: 7px; }
 .cv-entry p { margin: 10px 0 0; font-size: 13px; line-height: 1.75; color: #666960; overflow-wrap: anywhere; }
-.cv-entry p.cv-entry-title { margin: 0; font-size: 15px; font-weight: 500; line-height: 1.5; color: var(--ink); }
+.cv-entry p.cv-entry-title { margin: 0; font-size: 15px; font-weight: 400; line-height: 1.5; color: var(--ink); }
 .cv-entry-title a { text-decoration-color: #cbd0c3; }
 .cv-entry-meta { color: var(--muted); font-size: 12px; line-height: 1.7; }
 footer-bar { display: block; padding-bottom: 24px; }
