@@ -1,18 +1,34 @@
 [
   {
-    "url": "https://voyagela.com/interview/daily-inspiration-meet-jiyeon-kim/",
-    "image": "../assets/images/press/2026_voyageLA.png"
+    "url": "https://1883magazine.com/designed-silence-filmmaker-jiyeon-kim-proposes-archival-therapy-through-the-voices-of-survivors/",
+    "image": "../assets/images/press/2026_1883.webp",
+    "publication": "1883 Magazine",
+    "title": "Designed Silence: Filmmaker Jiyeon Kim Proposes Archival Therapy Through the Voices of Survivors",
+    "width": 783,
+    "height": 1200
   },
   {
-    "url": "https://1883magazine.com/designed-silence-filmmaker-jiyeon-kim-proposes-archival-therapy-through-the-voices-of-survivors/",
-    "image": "../assets/images/press/2026_1883.png"
+    "url": "https://voyagela.com/interview/daily-inspiration-meet-jiyeon-kim/",
+    "image": "../assets/images/press/2026_voyageLA.webp",
+    "publication": "VoyageLA",
+    "title": "Daily Inspiration: Meet Jiyeon Kim",
+    "width": 800,
+    "height": 1074
   },
   {
     "url": "https://boldjourney.com/meet-jiyeon-kim/",
-    "image": "../assets/images/press/2026_BOLD.png"
+    "image": "../assets/images/press/2026_BOLD.webp",
+    "publication": "Bold Journey",
+    "title": "Meet Jiyeon Kim",
+    "width": 670,
+    "height": 1200
   },
   {
     "url": "https://canvasrebel.com/meet-jiyeon-kim/",
-    "image": "../assets/images/press/20251106_canvasrebel.png"
+    "image": "../assets/images/press/20251106_canvasrebel.webp",
+    "publication": "CanvasRebel",
+    "title": "Meet Jiyeon Kim",
+    "width": 641,
+    "height": 1200
   }
 ]
