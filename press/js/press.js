@@ -1,107 +1,35 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const grid = document.querySelector('#pressGrid');
-  if (!grid) {
-    return;
-  }
-
-  const layoutMasonry = () => {
-    const cards = grid.querySelectorAll('.press-card');
-    if (!cards.length) {
-      return;
-    }
-
-    const styles = window.getComputedStyle(grid);
-    const rowHeight = parseFloat(styles.getPropertyValue('grid-auto-rows')) || 1;
-    const rowGap = parseFloat(styles.getPropertyValue('row-gap')) || 0;
-
-    cards.forEach(card => {
-      const figure = card.querySelector('figure');
-      if (!figure) {
-        return;
-      }
-
-      const height = figure.getBoundingClientRect().height;
-      const rowSpan = Math.ceil((height + rowGap) / (rowHeight + rowGap));
-      card.style.gridRowEnd = `span ${rowSpan}`;
-    });
-  };
-
-  let resizeAnimationFrame;
-  const scheduleLayout = () => {
-    cancelAnimationFrame(resizeAnimationFrame);
-    resizeAnimationFrame = requestAnimationFrame(layoutMasonry);
-  };
-
-  const waitForImages = images => Promise.all(
-    images.map(img => new Promise(resolve => {
-      if (img.complete) {
-        resolve();
-        return;
-      }
-
-      img.addEventListener('load', resolve, { once: true });
-      img.addEventListener('error', resolve, { once: true });
-    }))
-  );
-
+  if (!grid) return;
   try {
-    const response = await fetch('data/press-items.json');
-    if (!response.ok) {
-      throw new Error('Unable to load press items.');
-    }
-
+    const response = await fetch('data/press-items.json?v=20261008j');
+    if (!response.ok) throw new Error('Press data unavailable');
     const items = await response.json();
-    if (!Array.isArray(items) || items.length === 0) {
-      grid.innerHTML = '<p class="press-error">Press features will be published soon.</p>';
-      return;
-    }
-
     const fragment = document.createDocumentFragment();
-
-    items.forEach(item => {
-      if (!item || !item.url || !item.image) {
-        return;
-      }
-
+    items.forEach((item, index) => {
+      const article = document.createElement('article');
+      article.className = 'press-card' + (index === 0 ? ' featured' : '');
       const link = document.createElement('a');
-      link.href = item.url;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      link.className = 'press-card';
-
-      const labelParts = [];
-      if (item.title) labelParts.push(item.title);
-      if (item.publication) labelParts.push(item.publication);
-      if (labelParts.length) {
-        const label = labelParts.join(' — ');
-        link.setAttribute('aria-label', label);
-        link.title = label;
-      }
-
+      link.href = item.url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+      link.setAttribute('aria-label', `${item.publication}: ${item.title} (opens in a new tab)`);
       const figure = document.createElement('figure');
-
       const image = document.createElement('img');
-      image.src = item.image;
-      image.alt = item.alt || item.title || 'Press article screenshot';
-
-      figure.appendChild(image);
-      link.appendChild(figure);
-      fragment.appendChild(link);
+      image.src = item.image; image.alt = `Article preview from ${item.publication}`;
+      image.width = item.width; image.height = item.height; image.decoding = 'async';
+      image.loading = index === 0 ? 'eager' : 'lazy';
+      if (index === 0) image.fetchPriority = 'high';
+      image.addEventListener('error', () => { image.hidden = true; figure.classList.add('image-unavailable'); });
+      figure.append(image);
+      const body = document.createElement('div'); body.className = 'press-copy';
+      const publication = document.createElement('p'); publication.className = 'publication'; publication.textContent = item.publication;
+      const title = document.createElement('h2'); title.textContent = item.title;
+      const action = document.createElement('span'); action.className = 'read-article'; action.textContent = 'Read article';
+      const arrow = document.createElement('span'); arrow.textContent = '↗'; arrow.setAttribute('aria-hidden', 'true'); action.append(arrow);
+      body.append(publication, title, action); link.append(figure, body); article.append(link); fragment.append(article);
     });
-
-    if (!fragment.childNodes.length) {
-      grid.innerHTML = '<p class="press-error">Press features will be published soon.</p>';
-      return;
-    }
-
-    grid.appendChild(fragment);
-
-    const images = Array.from(grid.querySelectorAll('.press-card img'));
-    await waitForImages(images);
-    layoutMasonry();
-    window.addEventListener('resize', scheduleLayout);
-  } catch (error) {
-    console.error(error);
-    grid.innerHTML = '<p class="press-error">Trouble loading press features. Please refresh.</p>';
-  }
+    grid.replaceChildren(fragment);
+    if (!items.length) grid.textContent = 'Press features will be published soon.';
+  } catch {
+    grid.replaceChildren(Object.assign(document.createElement('p'), { className: 'press-status', textContent: 'Press could not load. Please refresh the page.' }));
+  } finally { grid.setAttribute('aria-busy', 'false'); }
 });

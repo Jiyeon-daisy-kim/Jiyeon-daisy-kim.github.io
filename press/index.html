@@ -6,24 +6,25 @@
   <title>Daisyeon - Press</title>
 
   <link rel="stylesheet" href="../assets/css/espacio_novo_font.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 
-  <link rel="stylesheet" type="text/css" href="css/press_style.css">
+  <link rel="stylesheet" type="text/css" href="css/press_style.css?v=20261008j">
   <link rel="icon" href="../assets/images/favicon.png" type="image/png">
 
   <script src="../assets/js/footer-bar-for-file-structure.js" defer></script>
-  <script src="../assets/js/nav-bar-for-file-structure.js?v=20261008" defer></script>
-  <script src="js/press.js" defer></script>
+  <script src="../assets/js/nav-bar-for-file-structure.js?v=20261008b" defer></script>
+  <script src="js/press.js?v=20261008j" defer></script>
 </head>
 <body>
   <div class="frame">
-    <nav-bar></nav-bar>
+    <nav-bar layout="page"></nav-bar>
 
     <main class="press-page">
-      <section class="press-grid" id="pressGrid">
+      <header class="press-hero"><h1>Press</h1><p>Selected interviews &amp; features</p></header>
+      <section class="press-grid" id="pressGrid" aria-label="Press articles" aria-busy="true">
+        <p class="press-status" role="status">Loading press…</p>
       </section>
+      <noscript><p>Read interviews in <a href="https://1883magazine.com/designed-silence-filmmaker-jiyeon-kim-proposes-archival-therapy-through-the-voices-of-survivors/">1883 Magazine</a>, <a href="https://voyagela.com/interview/daily-inspiration-meet-jiyeon-kim/">VoyageLA</a>, <a href="https://boldjourney.com/meet-jiyeon-kim/">Bold Journey</a> and <a href="https://canvasrebel.com/meet-jiyeon-kim/">CanvasRebel</a>.</p></noscript>
     </main>
 
     <footer-bar></footer-bar>
