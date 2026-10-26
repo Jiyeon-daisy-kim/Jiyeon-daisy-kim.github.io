@@ -28,7 +28,14 @@ function showDetail(index) {
 document.querySelector('#close-detail').addEventListener('click', () => dialog.close());
 document.querySelector('#previous-detail').addEventListener('click', () => showDetail(detailIndex - 1));
 document.querySelector('#next-detail').addEventListener('click', () => showDetail(detailIndex + 1));
-dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+dialog.addEventListener('click', event => {
+  if (event.target !== dialog) return;
+  const bounds = dialog.getBoundingClientRect();
+  if (event.clientX < bounds.left || event.clientX > bounds.right ||
+      event.clientY < bounds.top || event.clientY > bounds.bottom) {
+    dialog.close();
+  }
+});
 dialog.addEventListener('keydown', event => {
   if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
     event.preventDefault();
@@ -100,11 +107,22 @@ fetch('data/imageMap.json?v=20261008i').then(response => {
     const thumbnail = element('img'); thumbnail.src = work.thumbnail; thumbnail.alt = ''; thumbnail.width = 180; thumbnail.height = 112;
     button.append(thumbnail, element('span', '', work.title));
     if (work.year) button.append(element('small', '', work.year));
-    button.addEventListener('click', () => selectWork(work, index)); list.append(button); return button;
+    button.addEventListener('click', () => {
+      selectWork(work, index);
+      if (window.location.hash !== `#${work.id}`) window.location.hash = work.id;
+    });
+    list.append(button); return button;
   });
-  const match = works.findIndex(work => `#${work.id}` === window.location.hash);
-  const initial = match >= 0 ? match : 0;
-  selectWork(works[initial], initial);
+  function selectFromHash() {
+    const match = works.findIndex(work => `#${work.id}` === window.location.hash);
+    const index = match >= 0 ? match : 0;
+    if (selectedWork !== works[index]) {
+      if (dialog.open) dialog.close();
+      selectWork(works[index], index);
+    }
+  }
+  window.addEventListener('hashchange', selectFromHash);
+  selectFromHash();
 }).catch(() => {
   viewer.setAttribute('aria-busy', 'false');
   document.querySelector('#gallery-status').textContent = 'Artwork could not load. Please refresh the page.';
