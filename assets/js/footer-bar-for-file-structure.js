@@ -45,7 +45,7 @@ class FooterBar extends HTMLElement {
         <p>
           <img class="footer-image" src="../assets/images/DAISYEON_LOGO_orange.png" alt="Daisyeon Logo">
           <a class="contact-info-title" part="title"><strong>Daisyeon</strong></a>
-          <a href="https://www.instagram.com/daisy__yeon/" target="_blank">Instagram</a>
+          <a href="https://www.instagram.com/daisyeonfilm/" target="_blank">Instagram</a>
           <a href="../quick-contact/">Email</a>
           <a href="https://www.youtube.com/@daisy_yeon">Youtube</a>
         </p>
